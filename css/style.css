@@ -1,0 +1,348 @@
+section, nav, footer, #upperbar, #lowerbar {
+  width: 100%;
+}
+
+section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.carousel {
+  height: 100%;
+  width: 100%;
+}
+.carousel .carousel-inner {
+  height: 100%;
+  width: 100%;
+}
+.carousel .carousel-inner .carousel-item {
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.main-header {
+  margin-bottom: 100px;
+  text-transform: capitalize;
+}
+
+#navbar {
+  transition: background-color 0.5s linear;
+}
+#navbar .navbar-brand {
+  font-weight: bold;
+  color: #FFF;
+}
+#navbar .navbar-brand span {
+  color: gold;
+}
+#navbar .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#navbar .dropdown-menu a {
+  color: #FFF;
+}
+#navbar .dropdown-menu a:hover {
+  color: gold;
+}
+
+#slider-container {
+  height: 100vh;
+}
+#slider-container #slider .carousel-inner .carousel-item {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#slider-container #slider .carousel-inner .carousel-item:first-child {
+  background-image: url("../imgs/slider1.jpg");
+}
+#slider-container #slider .carousel-inner .carousel-item:nth-child(2) {
+  background-image: url("../imgs/slider2.jpg");
+}
+#slider-container #slider .carousel-inner .carousel-item:last-child {
+  background-image: url("../imgs/slider3.jpg");
+}
+
+#about video {
+  width: 80%;
+}
+@media (max-width: 768px) {
+  #about video {
+    width: 100%;
+  }
+}
+#about .first-content,
+#about .second-content {
+  width: 45%;
+}
+@media (max-width: 562px) {
+  #about .first-content,
+#about .second-content {
+    width: 100%;
+  }
+}
+#about .my-icons {
+  font-size: 2.5rem;
+}
+
+#hosting .col-md-6 {
+  margin-bottom: 50px;
+}
+#hosting .col-md-6 .hosting-preview {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #333;
+  color: #FFF;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+#hosting .col-md-6 .hosting-preview .hosting-overlay {
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.4s ease-in-out;
+}
+#hosting .col-md-6 .hosting-preview .hosting-overlay .hosting-content-container {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+#hosting .col-md-6 .hosting-preview .hosting-overlay .hosting-content-container a {
+  font-weight: bold;
+}
+#hosting .col-md-6 .hosting-preview .hosting-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#hosting .col-md-6 .hosting-preview .hosting-overlay:hover .hosting-content-container {
+  opacity: 1;
+}
+#hosting .col-md-6:first-child .hosting-preview {
+  background-image: url("../imgs/palace_preview.jpg");
+}
+#hosting .col-md-6:nth-child(2) .hosting-preview {
+  background-image: url("../imgs/club_preview.jpg");
+}
+#hosting .col-md-6:nth-child(3) .hosting-preview {
+  background-image: url("../imgs/cafe_preview.jpg");
+}
+#hosting .col-md-6:last-child .hosting-preview {
+  background-image: url("../imgs/resturant_preview.jpg");
+}
+
+#features .col-md-3 {
+  margin-bottom: 50px;
+}
+#features .col-md-3 h3 {
+  text-transform: capitalize;
+}
+
+#services .list-group {
+  height: 450px;
+}
+#services .list-group a {
+  height: 100%;
+}
+#services .tab-pane:first-child .col-md-4:first-of-type .card-img-top {
+  background-image: url("../imgs/seafood1.jpg");
+}
+#services .tab-pane:first-child .col-md-4:nth-of-type(2) .card-img-top {
+  background-image: url("../imgs/seafood2.jpg");
+}
+#services .tab-pane:first-child .col-md-4:last-child .card-img-top {
+  background-image: url("../imgs/seafood3.jpg");
+}
+#services .tab-pane:nth-child(2) .col-md-4:first-of-type .card-img-top {
+  background-image: url("../imgs/cold1.jpg");
+}
+#services .tab-pane:nth-child(2) .col-md-4:nth-of-type(2) .card-img-top {
+  background-image: url("../imgs/cold2.jpg");
+}
+#services .tab-pane:nth-child(2) .col-md-4:last-child .card-img-top {
+  background-image: url("../imgs/cold3.jpg");
+}
+#services .tab-pane:nth-child(3) .col-md-4:first-of-type .card-img-top {
+  background-image: url("../imgs/hot1.jpg");
+}
+#services .tab-pane:nth-child(3) .col-md-4:nth-of-type(2) .card-img-top {
+  background-image: url("../imgs/hot2.jpg");
+}
+#services .tab-pane:nth-child(3) .col-md-4:last-child .card-img-top {
+  background-image: url("../imgs/hot3.jpg");
+}
+#services .tab-pane:last-child .col-md-4:first-of-type .card-img-top {
+  background-image: url("../imgs/barbecue1.jpg");
+}
+#services .tab-pane:last-child .col-md-4:nth-of-type(2) .card-img-top {
+  background-image: url("../imgs/barbecue2.jpg");
+}
+#services .tab-pane:last-child .col-md-4:last-child .card-img-top {
+  background-image: url("../imgs/barbecue3.jpg");
+}
+#services .card-img-top {
+  width: 100%;
+  height: 750px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#events .product {
+  width: 100%;
+  height: 700px;
+  margin-bottom: 50px;
+}
+#events .product .card-img-top {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+#events .product .card-body i {
+  color: gold;
+}
+#events .product .card-body span {
+  color: #000;
+}
+#events .product .card-body span i {
+  color: #000;
+}
+#events .product .card-footer img {
+  width: 100%;
+}
+#events .col-md-3 {
+  transition: opacity 1s ease-out;
+}
+#events .col-md-3:first-child {
+  transition-delay: 0s;
+}
+#events .col-md-3:first-child .card-img-top {
+  background-image: url("../imgs/product1.jpg");
+}
+#events .col-md-3:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#events .col-md-3:nth-child(2) .card-img-top {
+  background-image: url("../imgs/product2.jpg");
+}
+#events .col-md-3:nth-child(3) {
+  transition-delay: 0.2s;
+}
+#events .col-md-3:nth-child(3) .card-img-top {
+  background-image: url("../imgs/product3.jpg");
+}
+#events .col-md-3:last-child {
+  transition-delay: 0.7s;
+}
+#events .col-md-3:last-child .card-img-top {
+  background-image: url("../imgs/product4.jpg");
+}
+
+#menu .menu {
+  width: 100%;
+}
+
+#contact input, #contact textarea {
+  border: 1px solid #DDD;
+}
+#contact input:focus, #contact textarea:focus {
+  box-shadow: 1px 1px 5px 1px #DDD;
+}
+#contact label {
+  color: #000;
+}
+#contact form {
+  position: relative;
+  transition: opacity 1s ease-out, top 1s ease-out;
+}
+#contact .contacts {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 3px 8px 3px #AAA;
+  transition: opacity 1s ease-out, bottom 1s ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../imgs/contact.jpg");
+  border-radius: 5px;
+  overflow: hidden;
+}
+#contact .contacts ul {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+#contact .contacts ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+#contact .contacts h1 {
+  font-weight: bold;
+  color: #FFF;
+}
+#contact .contacts h1 span {
+  color: gold;
+}
+
+#footer {
+  transition: opacity 1s ease-out;
+}
+#footer ul.page-items li a {
+  color: #FFF;
+  text-transform: uppercase;
+}
+#footer ul.page-items li a:hover {
+  color: gold;
+}
+#footer ul.page-items li a.active {
+  color: gold;
+}
+#footer ul.soc-items li {
+  background-color: #000;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+#footer ul.soc-items li a {
+  transition: transform 0.2s ease-in;
+}
+#footer ul.soc-items li a i {
+  font-size: 1.5rem;
+}
+#footer ul.soc-items li a:hover {
+  transform: scale(1.3);
+}
+
+#lowerbar {
+  transition: opacity 1s ease-out;
+  height: 56px;
+  background-color: #000;
+}
+#lowerbar p {
+  font-size: 1.1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

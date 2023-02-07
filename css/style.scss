@@ -1,0 +1,461 @@
+// Main Styles
+$blue: #000;
+$white: #FFF;
+$gold: gold;
+section, nav, footer, #upperbar, #lowerbar{
+	width:100%;
+}
+section{
+	padding:{
+		top: 100px;
+		bottom: 100px;
+	}
+}
+*{
+	&:focus{
+		outline: 0 !important;
+	}
+}
+a{
+	color: inherit;
+	&:hover{
+		text-decoration: none;
+		color: inherit;
+	}
+}
+.carousel{
+	height:100%;
+	width:100%;
+	.carousel-inner{
+		height:100%;
+		width:100%;
+		.carousel-item{
+			height:100%;
+			width:100%;
+		}
+	}
+}
+.overlay{
+	position:relative;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background-color: rgba(0,0,0,.3);
+}
+.main-header{
+	margin-bottom: 100px;
+	text-transform: capitalize;
+}
+@mixin image-settings ($size, $position){
+	background:{
+		size: $size;
+		position: $position;
+		repeat: no-repeat;
+	}
+}
+@mixin overlay ($op) {
+	position:relative;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	background:{
+		color: rgba(0,0,0,$op);
+	}
+}
+@mixin image-def ($name) {
+	background:{
+		image: url('../imgs/#{$name}');
+	}
+}
+
+// Single Styles
+
+// navbar
+#navbar{
+	transition: background-color .5s linear;
+	.navbar-brand{
+		font-weight: bold;
+		color: $white;
+		span{
+			color: $gold;
+		}
+	}
+	.dropdown-menu{
+		background-color: rgba(0,0,0,0.8);
+		a{
+			color: #FFF;
+			&:hover{
+				color: $gold;
+			}
+		}
+	}
+}
+
+// slider
+#slider-container{
+	height:100vh;
+	#slider{
+		.carousel-inner{
+			.carousel-item{
+				@include image-settings (cover, 50% 50%);
+				&:first-child{
+					@include image-def ('slider1.jpg');
+				}
+				&:nth-child(2){
+					@include image-def ('slider2.jpg');
+				}
+				&:last-child{
+					@include image-def ('slider3.jpg');
+				}
+			}
+		}
+	}
+}
+
+// about
+#about{
+	video{
+		width: 80%;
+		@media(max-width: 768px){
+			width: 100%;
+		}
+	}
+	.first-content,
+	.second-content{
+		width:45%;
+		@media(max-width:562px) {
+			width:100%;
+		}
+	}
+	.my-icons{
+		font-size:2.5rem;
+	}
+}
+
+// hosting
+#hosting {
+	.col-md-6{
+		margin-bottom: 50px;
+		.hosting-preview{
+			position: relative;
+			width:100%;
+			height: 500px;
+			background-color: #333;
+			color: #FFF;
+			@include image-settings (cover, 50% 50%);
+			.hosting-overlay{
+				background-color: rgba(0,0,0,0);
+				position: absolute;
+				top:0;
+				left:0;
+				width: 100%;
+				height: 100%;
+				transition: background-color .4s ease-in-out;
+				.hosting-content-container{
+					opacity: 0;
+					transition: opacity .4s ease-in-out;
+					a{
+						font-weight: bold;
+					}
+				}
+				&:hover{
+					background-color: rgba(0,0,0,0.6);
+					.hosting-content-container{
+						opacity: 1;
+					}
+				}
+			}
+		}
+		&:first-child{
+			.hosting-preview{
+				@include image-def ('palace_preview.jpg');
+			}
+		}
+		&:nth-child(2){
+			.hosting-preview{
+				@include image-def ('club_preview.jpg');
+			}
+		}
+		&:nth-child(3){
+			.hosting-preview{
+				@include image-def ('cafe_preview.jpg');
+			}
+		}
+		&:last-child{
+			.hosting-preview{
+				@include image-def ('resturant_preview.jpg');
+			}
+		}
+	}
+}
+
+// features
+#features {
+	.col-md-3{
+		margin-bottom: 50px;
+		h3{
+			text-transform: capitalize;
+		}
+	}
+}
+
+// services
+#services{
+	.list-group{
+		height: 450px;
+		a{
+			height: 100%;
+		}
+	}
+	.tab-pane{
+		&:first-child {
+			.col-md-4{
+				&:first-of-type {
+					.card-img-top{
+						@include image-def ('seafood1.jpg');
+					}
+				}
+				&:nth-of-type(2) {
+					.card-img-top{
+						@include image-def ('seafood2.jpg');
+					}
+				}
+				&:last-child {
+					.card-img-top{
+						@include image-def ('seafood3.jpg');
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			.col-md-4{
+				&:first-of-type {
+					.card-img-top{
+						@include image-def ('cold1.jpg');
+					}
+				}
+				&:nth-of-type(2) {
+					.card-img-top{
+						@include image-def ('cold2.jpg');
+					}
+				}
+				&:last-child {
+					.card-img-top{
+						@include image-def ('cold3.jpg');
+					}
+				}
+			}
+		}
+		&:nth-child(3) {
+			.col-md-4{
+				&:first-of-type {
+					.card-img-top{
+						@include image-def ('hot1.jpg');
+					}
+				}
+				&:nth-of-type(2) {
+					.card-img-top{
+						@include image-def ('hot2.jpg');
+					}
+				}
+				&:last-child {
+					.card-img-top{
+						@include image-def ('hot3.jpg');
+					}
+				}
+			}
+		}
+		&:last-child {
+			.col-md-4{
+				&:first-of-type {
+					.card-img-top{
+						@include image-def ('barbecue1.jpg');
+					}
+				}
+				&:nth-of-type(2) {
+					.card-img-top{
+						@include image-def ('barbecue2.jpg');
+					}
+				}
+				&:last-child {
+					.card-img-top{
+						@include image-def ('barbecue3.jpg');
+					}
+				}
+			}
+		}
+	}
+	.card-img-top{
+		width:100%;
+		height: 750px;
+		@include image-settings (cover, center);
+	}
+}
+
+// events
+#events{
+	.product{
+		width:100%;
+		height:700px;
+		margin-bottom: 50px;
+		.card-img-top{
+			@include image-settings (cover, 50% 50%);
+			width:100%;
+			height:100%;
+		}
+		.card-body{
+			i{
+				color: $gold;
+			}
+			span{
+				color: $blue;
+				i{
+					color: $blue;
+				}
+			}
+		}
+		.card-footer{
+			img{
+				width:100%;
+			}
+		}
+	}
+	.col-md-3{
+		//opacity:0;
+		transition: opacity 1s ease-out;
+		&:first-child{
+			transition-delay: 0s;
+			.card-img-top{
+				@include image-def ('product1.jpg');
+			}
+		}
+		&:nth-child(2){
+			transition-delay: .1s;
+			.card-img-top{
+				@include image-def ('product2.jpg');
+			}
+		}
+		&:nth-child(3){
+			transition-delay: .2s;
+			.card-img-top{
+				@include image-def ('product3.jpg');
+			}
+		}
+		&:last-child{
+			transition-delay: .7s;
+			.card-img-top{
+				@include image-def ('product4.jpg');
+			}
+		}
+	}
+}
+
+// menu
+#menu{
+	.menu{
+		width:100%;
+	}
+}
+
+// contact
+#contact{
+	input, textarea{
+		border: 1px solid #DDD;
+		&:focus{
+			box-shadow: 1px 1px 5px 1px #DDD;
+		}
+	}
+	label{
+		color: $blue;
+	}
+	form{
+		//opacity:0;
+		//top:-30px;
+		position:relative;
+		transition: opacity 1s ease-out,
+								top 1s ease-out;
+	}
+	.contacts{
+		width:100%;
+		//opacity:0;
+		//bottom:-30px;
+		position:relative;
+		box-shadow: 0px 3px 8px 3px #AAA;
+		transition: opacity 1s ease-out,
+								bottom 1s ease-out;
+		@include image-settings (cover, center);
+		@include image-def ('contact.jpg');
+		border-radius: 5px;
+		overflow: hidden;
+		ul{
+			margin-top:10px;
+			font-size: 1.2rem;
+			li:not(:last-child){
+				margin-bottom: 20px;
+			}
+		}
+		h1{
+			font-weight: bold;
+			color: $white;
+			span{
+				color: $gold;
+			}
+		}
+	}
+}
+
+// footer
+#footer{
+	//opacity:0;
+	transition: opacity 1s ease-out;
+	ul.page-items{
+		li{
+			a{
+				color: #FFF;
+				text:{
+					transform: uppercase;
+				}
+				&:hover{
+					color: $gold;
+				}
+				&.active{
+					color: $gold;
+				}
+			}
+		}
+	}
+	ul.soc-items{
+		li{
+			background-color: $blue;
+			border-radius: 5px;
+			width:60px;
+			height:60px;
+			a{
+				transition: transform .2s ease-in;
+				i{
+					font:{
+						size: 1.5rem;
+					}
+				}
+				&:hover{
+					transform: scale(1.3);
+				}
+			}
+		}
+	}
+}
+
+// lowerbar
+#lowerbar{
+	transition: opacity 1s ease-out;
+	//opacity:0;
+	height:56px;
+	background-color: #000;
+	p{
+		font:{
+			size: 1.1rem;
+		}
+	}
+}
